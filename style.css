@@ -1,0 +1,132 @@
+:root {
+    --ff: 'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fs-small: 0.92725;
+    --fs-normal: 1.25rem;
+    --fs-big: 2.5rem;
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-very-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--clr-very-dark-blue);
+}
+
+
+h1,h2,h3 {
+    line-height: 1.2;
+}
+
+body {
+    margin: 0;
+    padding-inline: 2rem;
+    background-color: var(--clr-very-light-gray);
+}
+
+header {
+    max-width: 600px;
+    text-align: center;
+    margin-inline: auto;
+    margin-block: 4rem;
+}
+
+header h1 {
+    font-weight: var(--fw-light);
+    font-size: var(--fs-big);
+}
+header h1  span {
+    font-weight: var(--fw-bold);
+    display: block;
+}
+
+header p {
+    color: var(--clr-grayish-blue);
+}
+
+main {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.layout-grid {
+    --gap:2rem;
+    display: flex;
+    gap: var(--gap);
+    flex:1;
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.col {
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card__title {
+    margin: 0;
+}
+
+.card p {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-light);
+    color: var(--clr-very-dark-blue);
+}
+
+.card img {
+    width: 60px;
+    margin-left: auto;
+    margin-top:20px;
+}
+
+.cyan-border {
+    border-top: 5px solid var(--clr-cyan);
+}
+.red-border {
+    border-top: 5px solid var(--clr-red);
+}
+.orange-border {
+    border-top: 5px solid var(--clr-orange);
+}
+.blue-border {
+    border-top: 5px solid var(--clr-blue);
+}
+
+@media screen and (max-width:768px){
+    .layout-grid {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+    .middle {
+        row-gap: 4rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
